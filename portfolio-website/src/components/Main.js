@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import LogoComponent from "../subComponents/LogoComponent";
 import PowerButton from "../subComponents/PowerButton";
 
 const Main = () => {
@@ -6,6 +7,7 @@ const Main = () => {
         <MainContainer>
             <Container>
                 <PowerButton />
+                <LogoComponent />
             </Container>
         </MainContainer>
     )
