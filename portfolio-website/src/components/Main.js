@@ -13,9 +13,10 @@ const Main = () => {
     return (
         <MainContainer>
             <Container>
+                <DarkDiv click={click} />
                 <PowerButton />
-                <LogoComponent />
-                <SocialIcons />
+                <LogoComponent theme={click ? "dark" : "light"} />
+                <SocialIcons theme={click ? "dark" : "light"} />
 
                 <Center click={click}>
                     <YinYang onClick={() => setClick(!click)} width={click ? 120 : 200} height={click ? 120 : 200} fill="currentColor" />
@@ -30,12 +31,12 @@ const Main = () => {
                     <h2>Work</h2>
                 </WORK>
 
-                <PROJECT to="/projects" >
+                <PROJECT to="/projects" click={click}>
                     <h2>Project</h2>
                 </PROJECT>
 
                 <BottomBar>
-                    <ABOUT to="/about" >
+                    <ABOUT to="/about" click={click}>
                         <h2>About.</h2>
                     </ABOUT>
 
@@ -68,6 +69,18 @@ const Container = styled.div`
     padding: 2rem;
 `;
 
+const DarkDiv = styled.div`
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 50%;
+    width: ${props => props.click ? '50%' : '0%'};
+    height: ${props => props.click ? '100%' : '0%'};
+    z-index:1;
+    background-color: #000;
+    transition: height 0.5s ease, width 1s ease 0.5s;
+`;
+
 const rotate = keyframes`
     from{
         transform: rotate(0);
@@ -75,7 +88,7 @@ const rotate = keyframes`
     to{
         transform: rotate(360deg);
     }
-`
+`;
 
 const Center = styled.button`
     position: absolute;
@@ -125,7 +138,7 @@ const WORK = styled(NavLink)`
 `;
 
 const PROJECT = styled(NavLink)`
-    color: ${props => props.theme.text};
+    color: ${props => props.click ? props.theme.body : props.theme.text};
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%) rotate(-90deg);
@@ -145,7 +158,7 @@ const BottomBar = styled.div`
 `;
 
 const ABOUT = styled(NavLink)`
-    color: ${props => props.theme.text};
+    color: ${props => props.click ? props.theme.body : props.theme.text};
     text-decoration: none;
     z-index:1;
 `;

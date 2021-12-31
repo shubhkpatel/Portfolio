@@ -1,18 +1,19 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { Facebook, Github, Twitter, YouTube } from "../components/AllSvgs";
+import { Github, Twitter } from "../components/AllSvgs";
+import { DarkTheme } from "../components/Themes";
 
-const SocialIcons = () => {
+const SocialIcons = ({ theme }) => {
     return (
         <Icons>
             <div>
                 <NavLink style={{ color: "inherit" }} target="_blank" to={{ pathname: "https://github.com/shubhkpatel/" }}>
-                    <Github width={25} height={25} fill="currentColor" />
+                    <Github width={25} height={25} fill={theme === "dark" ? DarkTheme.text : DarkTheme.body} />
                 </NavLink>
             </div>
             <div>
                 <NavLink style={{ color: "inherit" }} target="_blank" to={{ pathname: "https://twitter.com/ShubhPatel_18/" }}>
-                    <Twitter width={25} height={25} fill="currentColor" />
+                    <Twitter width={25} height={25} fill={theme === "dark" ? DarkTheme.text : DarkTheme.body} />
                 </NavLink>
             </div>
             {/* <div>
@@ -26,7 +27,7 @@ const SocialIcons = () => {
                 </NavLink>
             </div> */}
 
-            <Line />
+            <Line color={theme} />
         </Icons>
     )
 }
@@ -51,5 +52,5 @@ const Icons = styled.div`
 const Line = styled.span`
     width: 2px;
     height: 8rem;
-    background-color: ${props => props.theme.text};
+    background-color: ${props => props.color === "dark" ? DarkTheme.text : DarkTheme.body};
 `;
