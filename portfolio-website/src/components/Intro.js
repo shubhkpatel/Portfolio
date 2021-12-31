@@ -1,18 +1,23 @@
 import styled from "styled-components";
 import Me from "../assets/Images/profile-img.png";
+import { motion } from "framer-motion";
 
 const Intro = () => {
     return (
-        <Box>
+        <Box initial={{ height: 0 }} animate={{ height: "55vh" }} transition={{ type: "spring", duration: 2, delay: 1 }}>
             <Text>
                 <h1>Hi,</h1>
                 <h3>I'm Shubh.</h3>
                 <h6>I Code Simple yet beautiful websites with React.</h6>
             </Text>
             <SubBox>
-                <div>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1, delay: 2 }}
+                >
                     <img className="pic" src={Me} alt="" />
-                </div>
+                </motion.div>
             </SubBox>
         </Box>
     )
@@ -20,7 +25,7 @@ const Intro = () => {
 
 export default Intro;
 
-const Box = styled.div`
+const Box = styled(motion.div)`
     position: absolute;
     left: 50%;
     top: 50%;
