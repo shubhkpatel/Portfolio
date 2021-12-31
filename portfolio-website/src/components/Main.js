@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import LogoComponent from "../subComponents/LogoComponent";
@@ -6,6 +7,9 @@ import SocialIcons from "../subComponents/SocialIcons";
 import { YinYang } from "./AllSvgs";
 
 const Main = () => {
+
+    const [click, setClick] = useState(false);
+
     return (
         <MainContainer>
             <Container>
@@ -13,8 +17,8 @@ const Main = () => {
                 <LogoComponent />
                 <SocialIcons />
 
-                <Center>
-                    <YinYang width={200} height={200} fill="currentColor" />
+                <Center click={click}>
+                    <YinYang onClick={() => setClick(!click)} width={click ? 120 : 200} height={click ? 120 : 200} fill="currentColor" />
                     <span>Click here</span>
                 </Center>
 
@@ -75,8 +79,8 @@ const rotate = keyframes`
 
 const Center = styled.button`
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: ${props => props.click ? "85%" : "50%"};
+    left: ${props => props.click ? "92%" : "50%"};
     transform: translate(-50%, -50%);
     border: none;
     outline: none;
@@ -88,11 +92,14 @@ const Center = styled.button`
     justify-content: center;
     align-items: center;
 
+    transition: all 1s ease;
+
     &>:first-child{
         animation: ${rotate} infinite 1.5s linear;
     };
 
     &>:last-child{
+        display: ${props => props.click ? "none" : "inline-block"};
         padding-top: 1rem;
     };
 
