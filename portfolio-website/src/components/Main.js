@@ -26,24 +26,89 @@ const Main = () => {
                 </Center>
 
                 <Contact target="_blank" to={{ pathname: "mailto:patelshubh694@gmail.com" }} >
-                    <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>Say hi..</motion.h2>
+                    <motion.h2
+                        initial={{
+                            y: -200,
+                            transition: { type: 'spring', duration: 1.5, delay: 1 }
+                        }}
+                        animate={{
+                            y: 0,
+                            transition: { type: 'spring', duration: 1.5, delay: 1 }
+                        }}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                    >
+                        Say hi..
+                    </motion.h2>
                 </Contact>
 
                 <WORK to="/work" >
-                    <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>Work</motion.h2>
+                    <motion.h2
+                        initial={{
+                            y: -200,
+                            transition: { type: 'spring', duration: 1.5, delay: 1 }
+                        }}
+                        animate={{
+                            y: 0,
+                            transition: { type: 'spring', duration: 1.5, delay: 1 }
+                        }}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                    >
+                        Work
+                    </motion.h2>
                 </WORK>
 
                 <PROJECT to="/projects" click={click}>
-                    <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>Project</motion.h2>
+                    <motion.h2
+                        initial={{
+                            y: -200,
+                            transition: { type: 'spring', duration: 1.5, delay: 1 }
+                        }}
+                        animate={{
+                            y: 0,
+                            transition: { type: 'spring', duration: 1.5, delay: 1 }
+                        }}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                    >
+                        Project
+                    </motion.h2>
                 </PROJECT>
 
                 <BottomBar>
                     <ABOUT to="/about" click={click}>
-                        <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>About.</motion.h2>
+                        <motion.h2
+                            initial={{
+                                y: 200,
+                                transition: { type: 'spring', duration: 1.5, delay: 1 }
+                            }}
+                            animate={{
+                                y: 0,
+                                transition: { type: 'spring', duration: 1.5, delay: 1 }
+                            }}
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                        >
+                            About.
+                        </motion.h2>
                     </ABOUT>
 
                     <SKILLS to="/skills" >
-                        <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>My Skills.</motion.h2>
+                        <motion.h2
+                            initial={{
+                                y: 200,
+                                transition: { type: 'spring', duration: 1.5, delay: 1 }
+                            }}
+                            animate={{
+                                y: 0,
+                                transition: { type: 'spring', duration: 1.5, delay: 1 }
+                            }}
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                        >
+                            My Skills.
+                        </motion.h2>
                     </SKILLS>
                 </BottomBar>
 
