@@ -10,19 +10,19 @@ import { YinYang } from "./AllSvgs";
 import BigTitle from "../subComponents/BigTitle";
 import { motion } from "framer-motion";
 
-const ProjectPage = () => {
-
-    // Framer-motion configuration
-    const container = {
-        hidden: { opacity: 0 },
-        show: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.5,
-                duration: 0.5,
-            }
+// Framer-motion configuration
+const container = {
+    hidden: { opacity: 0 },
+    show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.5,
+            duration: 0.5,
         }
     }
+}
+
+const ProjectPage = () => {
 
     const ref = useRef(null);
     const yinyang = useRef(null);

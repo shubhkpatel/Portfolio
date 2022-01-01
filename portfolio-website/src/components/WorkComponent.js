@@ -1,22 +1,41 @@
+import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
+// Frame-motion Configuration
+const Item = {
+    hidden: {
+        scale: 0,
+    },
+    show: {
+        scale: 1,
+        transition: {
+            type: "spring",
+            duration: 0.5,
+        }
+    }
+}
+
 const WorkComponent = ({ blog: { name, tags, date, imgSrc, link } }) => {
     return (
-        <Box target="_blank" to={{ pathname: link }}>
-            <Image img={imgSrc} />
-            <Title>{name}</Title>
-            <HashTags>
-                {tags.map((t, id) => {
-                    return <Tag key={id} >#{t}</Tag>
-                })}
-            </HashTags>
-            <Date>{date}</Date>
-        </Box>
+        <Container variants={Item}>
+            <Box target="_blank" to={{ pathname: link }}>
+                <Image img={imgSrc} />
+                <Title>{name}</Title>
+                <HashTags>
+                    {tags.map((t, id) => {
+                        return <Tag key={id} >#{t}</Tag>
+                    })}
+                </HashTags>
+                <Date>{date}</Date>
+            </Box>
+        </Container>
     )
 }
 
 export default WorkComponent;
+
+const Container = styled(motion.div)``;
 
 const Box = styled(NavLink)`
     width: calc(10rem + 15vw);
@@ -71,7 +90,7 @@ const HashTags = styled.div`
     padding: 0.5rem 0;
 `;
 
-const Tag= styled.span`
+const Tag = styled.span`
     padding-right: 0.5rem;
 `;
 

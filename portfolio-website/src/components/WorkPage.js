@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import bgimg from "../assets/Images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg";
@@ -9,6 +10,19 @@ import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
 import WorkComponent from "./WorkComponent";
 
+// Framer-motion config
+const container = {
+    hidden: { opacity: 0 },
+    show: {
+        opacity: 1,
+
+        transition: {
+            staggerChildren: 0.5,
+            duration: 0.5,
+        }
+    }
+}
+
 const WorkPage = () => {
 
     const [numbers, setNumbers] = useState(0);
@@ -19,7 +33,7 @@ const WorkPage = () => {
     }, [window.innerHeight]);
 
     return (
-        <MainContainer>
+        <MainContainer variants={container} initial='hidden' animate='show' exit={{ opacity: 0, transition: { duration: 0.5 } }}>
             <Container>
                 <LogoComponent />
                 <PowerButton />
@@ -43,7 +57,7 @@ const WorkPage = () => {
 
 export default WorkPage;
 
-const MainContainer = styled.div`
+const MainContainer = styled(motion.div)`
     background-image: url(${bgimg});
     background-size: cover;
     background-repeat: no-repeat;
