@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import bgimg from "../assets/Images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg";
 import { Blogs } from "../data/BlogData";
+import AnchorComponent from "../subComponents/Anchor";
 import LogoComponent from "../subComponents/LogoComponent";
 import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
@@ -13,6 +14,7 @@ const WorkPage = () => {
                 <LogoComponent />
                 <PowerButton />
                 <SocialIcons />
+                <AnchorComponent />
 
                 <Center>
                     <Grid>
