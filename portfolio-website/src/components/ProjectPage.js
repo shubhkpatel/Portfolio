@@ -8,8 +8,22 @@ import Card from "../subComponents/Card";
 import { useEffect, useRef } from "react";
 import { YinYang } from "./AllSvgs";
 import BigTitle from "../subComponents/BigTitle";
+import { motion } from "framer-motion";
 
 const ProjectPage = () => {
+
+    // Framer-motion configuration
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.5,
+                duration: 0.5,
+            }
+        }
+    }
+
     const ref = useRef(null);
     const yinyang = useRef(null);
 
@@ -17,8 +31,7 @@ const ProjectPage = () => {
 
         const rotate = () => {
             ref.current.style.transform = `translateX(${-window.pageYOffset}px)`;
-            yinyang.current.style.transform = `rotate(${-window.pageYOffset}deg)`;
-            return;
+            return yinyang.current.style.transform = `rotate(${-window.pageYOffset}deg)`;
         }
 
         window.addEventListener('scroll', rotate)
@@ -34,7 +47,7 @@ const ProjectPage = () => {
                 <SocialIcons theme="dark" />
                 <PowerButton />
 
-                <Main ref={ref}>
+                <Main ref={ref} variants={container} initial="hidden" animate="show">
                     {
                         Project.map((project) => {
                             return <Card key={project.id} data={project}></Card>
@@ -65,7 +78,7 @@ const Box = styled.div`
     align-items: center;
 `;
 
-const Main = styled.ul`
+const Main = styled(motion.ul)`
     color:white;
     position: fixed;
     top: 12rem;
