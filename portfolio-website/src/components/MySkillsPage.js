@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import LogoComponent from "../subComponents/LogoComponent";
+import ParticleComponent from "../subComponents/ParticleComponent";
 import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
 import { Design, Develope } from "./AllSvgs";
@@ -10,6 +11,7 @@ const MySkillsPage = () => {
             <LogoComponent />
             <SocialIcons />
             <PowerButton />
+            <ParticleComponent theme="light" />
 
             <Main>
                 <Title>
