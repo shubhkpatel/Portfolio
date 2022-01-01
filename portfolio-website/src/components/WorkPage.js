@@ -3,6 +3,7 @@ import styled from "styled-components";
 import bgimg from "../assets/Images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg";
 import { Blogs } from "../data/BlogData";
 import AnchorComponent from "../subComponents/Anchor";
+import BigTitle from "../subComponents/BigTitle";
 import LogoComponent from "../subComponents/LogoComponent";
 import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
@@ -15,7 +16,7 @@ const WorkPage = () => {
     useEffect(() => {
         let num = (window.innerHeight - 70) / 30;
         setNumbers(parseInt(num));
-    }, []);
+    }, [window.innerHeight]);
 
     return (
         <MainContainer>
@@ -32,6 +33,8 @@ const WorkPage = () => {
                         })}
                     </Grid>
                 </Center>
+
+                <BigTitle text="WORK" top="5rem" left="5rem" />
 
             </Container>
         </MainContainer>

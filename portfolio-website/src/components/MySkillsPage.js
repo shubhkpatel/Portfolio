@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import BigTitle from "../subComponents/BigTitle";
 import LogoComponent from "../subComponents/LogoComponent";
 import ParticleComponent from "../subComponents/ParticleComponent";
 import PowerButton from "../subComponents/PowerButton";
@@ -50,6 +51,8 @@ const MySkillsPage = () => {
                     <p>VScode, Github, Codepen etc.</p>
                 </Description>
             </Main>
+
+            <BigTitle text="SKILLS" top="80%" right="30%" />
         </Box>
     )
 }

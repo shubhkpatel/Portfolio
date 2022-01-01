@@ -7,15 +7,16 @@ import { Project } from "../data/ProjectData";
 import Card from "../subComponents/Card";
 import { useEffect, useRef } from "react";
 import { YinYang } from "./AllSvgs";
+import BigTitle from "../subComponents/BigTitle";
 
 const ProjectPage = () => {
     const ref = useRef(null);
     const yinyang = useRef(null);
 
     useEffect(() => {
-        
+
         const rotate = () => {
-            ref.current.style.transform = `translateX(${-window.pageYOffset}px)`
+            ref.current.style.transform = `translateX(${-window.pageYOffset}px)`;
             yinyang.current.style.transform = `rotate(${-window.pageYOffset}deg)`;
             return;
         }
@@ -45,6 +46,8 @@ const ProjectPage = () => {
                     <YinYang width={80} height={80} fill={DarkTheme.text} />
                 </Rotate>
 
+                <BigTitle text="PROJECT" top="10%" right="20%" />
+
             </Box>
         </ThemeProvider>
     )
@@ -55,10 +58,11 @@ export default ProjectPage;
 const Box = styled.div`
     background-color: ${props => props.theme.body};
     width: 100vw;
-    height: 400vh;
+    height: 300vh;
     position: relative;
 
-    overflow: hidden;
+    display: flex;
+    align-items: center;
 `;
 
 const Main = styled.ul`

@@ -5,6 +5,7 @@ import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
 import { DarkTheme } from "./Themes";
 import astronaut from "../assets/Images/spaceman.png";
+import BigTitle from "../subComponents/BigTitle";
 
 const AboutPage = () => {
     return (
@@ -26,6 +27,8 @@ const AboutPage = () => {
                     <br /> <br/>
                     I believe everything is an Art when you put your consciousness in it. You can connect with me via social links.
                 </Main>
+
+                <BigTitle text="ABOUT" top="10%" left="5%" />
             </Box>
         </ThemeProvider>
     )
