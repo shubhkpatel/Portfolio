@@ -8,6 +8,7 @@ import WorkPage from "./components/WorkPage";
 import MySkillsPage from "./components/MySkillsPage";
 import ProjectPage from "./components/ProjectPage";
 import { AnimatePresence } from "framer-motion";
+import SoundBar from "./subComponents/SoundBar";
 
 function App() {
   const location = useLocation();
@@ -16,6 +17,8 @@ function App() {
     <GlobalStyle />
 
     <ThemeProvider theme={lightTheme}>
+
+      <SoundBar />
 
       {/* For Framer-motion animation on Page Change */}
       <AnimatePresence exitBeforeEnter>
