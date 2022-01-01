@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useEffect, useRef } from 'react';
 import { Anchor, Link } from '../components/AllSvgs';
 
-const AnchorComponent = () => {
+const AnchorComponent = ({numbers}) => {
     const ref = useRef(null);
     const hiddenRef = useRef(null);
 
@@ -40,7 +40,7 @@ const AnchorComponent = () => {
 
             <Slider ref={ref}>
                 {
-                    [...Array(25)].map((x, id) => {
+                    [...Array(numbers)].map((x, id) => {
                         return <Link key={id} width={25} height={25} fill="currentColor" className="chain" />
                     })
                 }

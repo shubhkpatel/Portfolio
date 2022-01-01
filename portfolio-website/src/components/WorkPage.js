@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import bgimg from "../assets/Images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg";
 import { Blogs } from "../data/BlogData";
@@ -8,13 +9,21 @@ import SocialIcons from "../subComponents/SocialIcons";
 import WorkComponent from "./WorkComponent";
 
 const WorkPage = () => {
+
+    const [numbers, setNumbers] = useState(0);
+
+    useEffect(() => {
+        let num = (window.innerHeight - 70) / 30;
+        setNumbers(parseInt(num));
+    }, []);
+
     return (
         <MainContainer>
             <Container>
                 <LogoComponent />
                 <PowerButton />
                 <SocialIcons />
-                <AnchorComponent />
+                <AnchorComponent numbers={numbers} />
 
                 <Center>
                     <Grid>
