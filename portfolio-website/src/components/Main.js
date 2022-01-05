@@ -42,7 +42,7 @@ const Main = () => {
                     </motion.h2>
                 </Contact>
 
-                <WORK to="/work" >
+                {/* <WORK to="/work" >
                     <motion.h2
                         initial={{
                             y: -200,
@@ -57,7 +57,7 @@ const Main = () => {
                     >
                         Work
                     </motion.h2>
-                </WORK>
+                </WORK> */}
 
                 <PROJECT to="/projects" click={click}>
                     <motion.h2

@@ -47,7 +47,7 @@ const ProjectPage = () => {
                 <SocialIcons theme="dark" />
                 <PowerButton />
 
-                <Main ref={ref} variants={container} initial="hidden" animate="show">
+                <Main ref={ref ?? !null} variants={container} initial="hidden" animate="show">
                     {
                         Project.map((project) => {
                             return <Card key={project.id} data={project}></Card>

@@ -1,6 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-/Portfolio Images
+/src/data/BlogData.js
+/src/data/Text.txt
 
 # dependencies
 /node_modules

@@ -4,7 +4,7 @@ import LogoComponent from "../subComponents/LogoComponent";
 import ParticleComponent from "../subComponents/ParticleComponent";
 import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
-import { Design, Develope } from "./AllSvgs";
+import { Backend, Develope } from "./AllSvgs";
 
 const MySkillsPage = () => {
     return (
@@ -16,21 +16,19 @@ const MySkillsPage = () => {
 
             <Main>
                 <Title>
-                    <Design width={40} height={40} fill="currentColor" /> Designer
+                    <Backend width={40} height={40} fill="currentColor" /> Backend Developer
                 </Title>
                 <Description>
-                    I love to create design which speaks, Keep it clean, minimal and simple.
+                    I love learning all the behind the scenes process
                 </Description>
                 <Description>
-                    <strong>I like to Design</strong>
-                    <ul>
-                        <li>Web Design</li>
-                    </ul>
+                    <strong>Skills</strong>
+                    <p>NodeJS, MongoDB, Express</p>
                 </Description>
                 <Description>
                     <strong>Tools</strong>
                     <ul>
-                        <li>Figma</li>
+                        <li>Postman</li>
                     </ul>
                 </Description>
             </Main>
@@ -40,15 +38,15 @@ const MySkillsPage = () => {
                     <Develope width={40} height={40} fill="currentColor" /> FrontEnd Developer
                 </Title>
                 <Description>
-                    I value business or brand for which i'm creating, thus i enjoy bringing new ideas to life.
+                    I enjoy building clones of popular apps which opens the door of learning for me.
                 </Description>
                 <Description>
                     <strong>Skills</strong>
-                    <p>Html, Css, Js, React, Redux, Sass, Bootstrap, Tailwind, Firebase etc.</p>
+                    <p>Html, CSS, JS, React, Redux, Recoil, Styled Components, Tailwind, Firebase etc.</p>
                 </Description>
                 <Description>
                     <strong>Tools</strong>
-                    <p>VScode, Github, Codepen etc.</p>
+                    <p>VScode, Github etc.</p>
                 </Description>
             </Main>
 

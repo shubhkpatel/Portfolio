@@ -1,61 +1,39 @@
 export const Project = [
     {
         id:1,
-        name:"Agency Landing Page",
-        description:"It is build on top of the React JS, with styledComponents and GSAP for smooth scrolling animations.",
-        tags:["react","gsap","styledComponents"],
+        name:"COVID-19 TRACKER",
+        description:"It is build on top of the React JS, with ChartJs for different visulaizations",
+        tags:["react","chartjs","api"],
         
-        demo:"https://agency-website-eta.vercel.app/",
-        github:"https://github.com/codebucks27/Agency-website"
+        demo:"https://covid-19-tracker-584de.web.app/",
+        github:"https://github.com/shubhkpatel/Covid-19-Tracker"
     },
     {
         id:2,
-        name:"Job listing website",
-        description:"A Job listing website build in ReactJS. With searching and filtering functionalities.",
-        tags:["react","sass"],
+        name:"Airbnb Clone",
+        description:"A frontend clone of Airbnb with nextjs and awesome search feature",
+        tags:["NextJS","tailwindCSS", "Map-Gl"],
         
-        demo:"http://react-job-listing-website.codebucks27.vercel.app/",
-        github:"https://github.com/codebucks27/react-job-listing-website"
+        demo:"https://airbnb-clone-lake-delta.vercel.app/",
+        github:"https://github.com/shubhkpatel/Airbnb-Clone"
         
     },
     {
         id:3,
-        name:"Dev.to Clone",
-        description:"A clone of Dev.to build using ReactJS. With realtime fetching of articles from dev.to using API.",
-        tags:["react","api","sass"],
+        name:"Twitter Clone",
+        description:"A clone of twitter with some awesome chat feature",
+        tags:["NextJS","tailwindCSS","firebase", "Recoil"],
         
-        demo:"http://devto-clone-codebucks27.vercel.app/",
-        github:"https://github.com/codebucks27/devto-clone"
+        demo:"https://twitter-clone-nu-lake.vercel.app/",
+        github:"https://github.com/shubhkpatel/Twitter-Clone"
     },
     {
         id:4,
-        name:"Sidebar Menu",
-        description:"A cool looking sidebar menu build using ReactJS and styledComponents.It has really smooth animations.",
-        tags:["react","styledComponents","react-router"],
+        name:"Spotify Clone",
+        description:"A cool looking Clone of Spotify built on nextjs and tailwindcss.",
+        tags:["NextJS","tailwindCSS","Middleware", "Recoil"],
         
-        demo:"https://react-sidebar.vercel.app/",
-        github:"https://github.com/codebucks27/react-sidebar"
-       
-    },{
-        id:5,
-        name:"Todo App(React + Redux)",
-        description:"A todo app build using Redux-toolkit and framer-motion for smooth animations.",
-        tags:["react","redux","framer-motion"],
-        
-        demo:"http://react-redux-todo-app-git-main-codebucks27.vercel.app/",
-        github:"https://github.com/codebucks27/React-Redux-Todo-App"
-        
+        demo:"https://spotify-2-0-two.vercel.app/",
+        github:"https://github.com/shubhkpatel/Spotify-2.0"
     },
-    {
-        id:6,
-        name:"Responsive Navigation Menu",
-        description:"A reponsive navbar menu component in ReactJS with react-router functionalities. Built from scratch.",
-        tags:["react","react-router","css"],
-        
-        demo:"http://react-responsive-navbar-codebucks27.vercel.app/",
-        github:"https://github.com/codebucks27/React-responsive-navbar"
-        
-    },
-    
-  
 ] 
