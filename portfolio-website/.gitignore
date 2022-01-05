@@ -2,6 +2,8 @@
 
 /src/data/BlogData.js
 /src/data/Text.txt
+/src/components/WorkComponent.js
+/src/components/WorkPage.js
 
 # dependencies
 /node_modules

@@ -7,8 +7,8 @@ Learnt this awesome portfolio using framer motion and animation 👇: <br />
 https://youtu.be/jcohAIaSy2M <br />
 
 ### Images of The Portfolio Website:
-![HOME](https://github.com/shubhkpatel/Portfolio/blob/main/Portfolio%20Images/home.jpg)
-![Intro](https://github.com/shubhkpatel/Portfolio/blob/main/Portfolio%20Images/intro.jpg)
+![HOME](https://github.com/shubhkpatel/Portfolio/blob/main/portfolio-website/Portfolio%20Images/home.jpg?raw=true)
+![Intro](https://github.com/shubhkpatel/Portfolio/blob/main/portfolio-website/Portfolio%20Images/intro.jpg?raw=true)
 <!-- ![Blog](https://github.com/codebucks27/React-Portfolio-starter-code-files/blob/main/Portfolio%20Images/Blog.png)
 ![Home Mobile](https://github.com/codebucks27/React-Portfolio-starter-code-files/blob/main/Portfolio%20Images/Home-Mobile.png)
 ![Intro Mobile](https://github.com/codebucks27/React-Portfolio-starter-code-files/blob/main/Portfolio%20Images/Intro-Mobile.png)

@@ -4,7 +4,7 @@ import { lightTheme } from "./components/Themes";
 import GlobalStyle from "./globalStyles";
 import Main from "./components/Main";
 import AboutPage from "./components/AboutPage";
-import WorkPage from "./components/WorkPage";
+// import WorkPage from "./components/WorkPage";
 import MySkillsPage from "./components/MySkillsPage";
 import ProjectPage from "./components/ProjectPage";
 import { AnimatePresence } from "framer-motion";
