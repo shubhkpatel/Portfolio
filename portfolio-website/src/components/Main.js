@@ -114,7 +114,7 @@ const Main = () => {
 
             </Container>
 
-            {click ? <Intro click={click} /> : null}
+            {click && <Intro click={click} />}
         </MainContainer >
     )
 }
@@ -196,15 +196,15 @@ const Contact = styled(NavLink)`
     z-index: 1;
 `;
 
-const WORK = styled(NavLink)`
-    color: ${props => props.theme.text};
-    position: absolute;
-    top: 50%;
-    transform: rotate(90deg) translate(-50%, -50%);
-    right: calc(1rem + 2vw);
-    text-decoration: none;
-    z-index: 1;
-`;
+// const WORK = styled(NavLink)`
+//     color: ${props => props.theme.text};
+//     position: absolute;
+//     top: 50%;
+//     transform: rotate(90deg) translate(-50%, -50%);
+//     right: calc(1rem + 2vw);
+//     text-decoration: none;
+//     z-index: 1;
+// `;
 
 const PROJECT = styled(NavLink)`
     color: ${props => props.click ? props.theme.body : props.theme.text};
